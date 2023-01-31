@@ -8,13 +8,13 @@ https://flask.palletsprojects.com/en/2.2.x/deploying/waitress/
 
 # or
 
-cd hello-app
+cd py_flask
 python -m venv venv
 . venv/bin/activate
-pip install .  # install your application
+pip install -e .
 pip install waitress
 
 # equivalent to 'from app import app'
-waitress-serve --host 127.0.0.1 app:app
+waitress-serve --host 127.0.0.1 --port 5555 app:app
 
-Serving on http://127.0.0.1:8080
+Serving on http://127.0.0.1:5555
